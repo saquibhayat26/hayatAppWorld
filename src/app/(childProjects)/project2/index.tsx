@@ -6,7 +6,7 @@ export default function Project2() {
     <View>
       <Stack.Screen options={{ title: "Project 2" }} />
 
-      <Text>Project 2</Text>
+      <Text style={{ fontFamily: "AmaticBold", fontSize: 100 }}>Project 2</Text>
     </View>
   );
 }
