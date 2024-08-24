@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: "#9b4521",
+    fontFamily: "AmaticBold",
     fontSize: 70,
   },
 
