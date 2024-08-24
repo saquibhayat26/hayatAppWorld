@@ -5,6 +5,8 @@ import {
   FlatList,
   SafeAreaView,
   StyleSheet,
+  StatusBarStyle,
+  View,
 } from "react-native";
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import {
@@ -12,15 +14,14 @@ import {
   AmaticSC_700Bold,
 } from "@expo-google-fonts/amatic-sc";
 import * as SplashScreen from "expo-splash-screen";
-
-import { DATA } from "./src/data/dayListItem/Item";
-import DayListItem from "./src/components/core/DayListItem";
-import { ItemData } from "./src/data/dayListItem/types";
+import { DATA } from "../data/dayListItem/Item";
+import DayListItem from "../components/core/DayListItem";
+import { ItemData } from "../data/dayListItem/types";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+export default function HomeScreen() {
   const [appIsReady, setAppIsReady] = useState(false);
   const [isRefereshing, setIsRefereshing] = useState(false);
 
@@ -60,7 +61,8 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
+    <SafeAreaView onLayout={onLayoutRootView} style={styles.container}>
+      <StatusBar style="auto" />
       <FlatList
         data={DATA}
         numColumns={2}
@@ -78,8 +80,6 @@ export default function App() {
         refreshing={isRefereshing}
         progressViewOffset={400}
       />
-
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
