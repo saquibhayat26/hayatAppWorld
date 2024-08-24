@@ -1,7 +1,8 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 import { Link } from "expo-router";
+import { ItemData } from "@data/dayListItem/types";
 
-function DayListItem({ id, day }) {
+function DayListItem({ id, day }: ItemData) {
   return (
     <Link href={`/project${id}`} asChild>
       <Pressable style={styles.box} key={id}>

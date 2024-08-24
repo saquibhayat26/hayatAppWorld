@@ -27,6 +27,9 @@
     "androidStatusBar": {
       "backgroundColor": "#f9ede3",
       "translucent": false
+    },
+    "experiments": {
+      "tsconfigPaths": true
     }
   }
 }

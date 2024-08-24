@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { FlatList, SafeAreaView, StyleSheet } from "react-native";
-import { DATA } from "../data/dayListItem/Item";
-import DayListItem from "../components/core/DayListItem";
-import { ItemData } from "../data/dayListItem/types";
+import DayListItem from "@components/core/DayListItem";
+import { ItemData } from "@data/dayListItem/types";
+import { DATA } from "@data/dayListItem/Item";
 
 export default function HomeScreen() {
   const [isRefereshing, setIsRefereshing] = useState(false);
