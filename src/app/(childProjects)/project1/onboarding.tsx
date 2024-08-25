@@ -79,7 +79,7 @@ export default function OnboardingScreeen() {
           <Animated.View entering={ZoomIn} exiting={ZoomOut}>
             <FontAwesome5
               name={data.icon}
-              size={100}
+              size={180}
               color="#e3da81"
               style={styles.icon}
             />
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   activeStepIndicator: { backgroundColor: "#e3da81" },
   icon: {
     alignSelf: "center",
-    marginTop: 20,
+    marginTop: 80,
   },
   text: {
     color: "#FDFDFD",
