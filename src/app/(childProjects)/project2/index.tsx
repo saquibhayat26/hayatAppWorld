@@ -1,12 +1,34 @@
-import { Stack } from "expo-router";
-import { Text, View } from "react-native";
+import { Link, Stack } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Project2() {
   return (
-    <View>
+    <View style={styles.container}>
       <Stack.Screen options={{ title: "Project 2" }} />
 
-      <Text style={{ fontFamily: "AmaticBold", fontSize: 100 }}>Project 2</Text>
+      <Text style={styles.title}>Firebase Tutorial</Text>
+      <Link href={"/project2/firebase"} asChild>
+        <Pressable>
+          <Text style={styles.subtitle}>Go to Firebase</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#f9ede3",
+  },
+  title: {
+    fontFamily: "AmaticBold",
+    fontSize: 40,
+  },
+  subtitle: {
+    fontFamily: "AmaticBold",
+    fontSize: 20,
+  },
+});
