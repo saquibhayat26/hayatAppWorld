@@ -65,12 +65,10 @@ export default function RootLayout() {
             fontSize: 30,
           },
           headerTintColor: "#9b4521",
+          statusBarColor: "#f9ede3",
         }}
       >
-        <Stack.Screen
-          name="index"
-          options={{ title: "Home", statusBarColor: "#f9ede3" }}
-        />
+        <Stack.Screen name="index" options={{ title: "Home" }} />
       </Stack>
     </GestureHandlerRootView>
   );

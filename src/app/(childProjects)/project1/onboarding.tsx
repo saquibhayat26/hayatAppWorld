@@ -59,7 +59,6 @@ export default function OnboardingScreeen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
       <Stack.Screen options={{ headerShown: false }} />
       <GestureDetector gesture={composed}>
         <Animated.View style={styles.pageContent} key={screenIndex}>

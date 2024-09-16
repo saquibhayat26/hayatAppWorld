@@ -7,7 +7,7 @@ export default function Project2() {
       <Stack.Screen options={{ title: "Project 2" }} />
 
       <Text style={styles.title}>Firebase Tutorial</Text>
-      <Link href={"/project2/firebase"} asChild>
+      <Link href={"/project2/notifications"} asChild>
         <Pressable>
           <Text style={styles.subtitle}>Go to Firebase</Text>
         </Pressable>
