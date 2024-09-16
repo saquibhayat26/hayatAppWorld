@@ -33,3 +33,8 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# push notification
+hayatappworld-firebase-adminsdk-ujkbu-9abf77a17c.json
+google-services.json
+android/google-services.json
