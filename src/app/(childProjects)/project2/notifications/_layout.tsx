@@ -1,6 +1,6 @@
 import { Platform, StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
-import { Slot } from "expo-router";
+import { Slot, Stack } from "expo-router";
 import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 import Constants from "expo-constants";
@@ -15,11 +15,9 @@ Notifications.setNotificationHandler({
 
 const _layout = () => {
   const [expoPushToken, setExpoPushToken] = useState("");
-  console.log("🚀 ~ file: _layout.tsx:18 ~ expoPushToken:", expoPushToken);
   const [notification, setNotification] = useState<
     Notifications.Notification | undefined
   >(undefined);
-
   const notificationListener = useRef<Notifications.Subscription>();
   const responseListener = useRef<Notifications.Subscription>();
 
@@ -49,12 +47,25 @@ const _layout = () => {
   }, []);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
+      {expoPushToken && (
+        <View style={{ padding: 10 }}>
+          <Text>Expo Push Token: {expoPushToken}</Text>
+        </View>
+      )}
+      <Stack.Screen options={{ headerShown: false }} />
       <Slot screenOptions={{ headerShown: false }} />
+      {notification && (
+        <View style={{ padding: 10 }}>
+          <Text>Date: {new Date(notification.date).toString()}</Text>
+          <Text>Title: {notification.request.content.title}</Text>
+          <Text>Body: {notification.request.content.body}</Text>
+          <Text>Data: {notification.request.content.data.someData}</Text>
+        </View>
+      )}
     </View>
   );
 };
-
 export default _layout;
 
 const registerForPushNotificationsAsync = async () => {

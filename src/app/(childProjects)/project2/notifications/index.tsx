@@ -6,9 +6,6 @@ import * as Notifications from "expo-notifications";
 const NotificationsHomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Stack.Screen options={{ headerShown: false }} />
-
-      <Text style={styles.title}>firebase</Text>
       <Button
         title="Press to Send Notification"
         onPress={async () => {
