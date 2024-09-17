@@ -48,13 +48,16 @@ const _layout = () => {
 
   return (
     <View style={{ flex: 1 }}>
+      <Stack.Screen options={{ headerShown: false }} />
       {expoPushToken && (
         <View style={{ padding: 10 }}>
           <Text>Expo Push Token: {expoPushToken}</Text>
         </View>
       )}
-      <Stack.Screen options={{ headerShown: false }} />
-      <Slot screenOptions={{ headerShown: false }} />
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+      </Stack>
+
       {notification && (
         <View style={{ padding: 10 }}>
           <Text>Date: {new Date(notification.date).toString()}</Text>
