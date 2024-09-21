@@ -16,7 +16,7 @@ const defaultStyles = {
   headGradientColors: ["#edb588", "#edb588"],
 };
 const activeStyles = {
-  bgGradientColors: ["#979690", "#4b4a45"],
+  bgGradientColors: ["#979690", "#333333"],
   headGradientColors: ["#edb588", "#edb588"],
 };
 
